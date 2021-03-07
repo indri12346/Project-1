@@ -5,16 +5,44 @@
  */
 package classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ASUS
  */
-import java.until.ArrayList;
+
 
 public class DaftarMenu {
-    private final ArrayList<Menu> DaftarMenu;
-    public DaftarMenu(){this.DaftarMenu = new ArrayList<Menu>();}
-    public void tambahkanMenu(Menu menu){}
-    public void getMenuByKategori(String kategori){}
-    public void tampilDatfarMenu(){}
+    private final ArrayList<Menu> daftarMenu;
+    public DaftarMenu(){
+      daftarMenu = new ArrayList<Menu>();
+    }
+    public void tambahMenu(Menu menu){
+        daftarMenu.add(menu);
+    }
+    public void getMenuByKategori(String kategori){
+        System.out.println("========" + kategori + "========");
+    
+        for (int i =0; i < daftarMenu.size(); i++ ){
+         Menu m = daftarMenu.get(i);
+         if (m.getKategori().equals(kategori)){
+             System.out.println((i + 1) + "."+ m.getNama_menu() + "\t" +m.getHarga());
+         }
+        }
+    }
+    
+    public void tampilDatfarMenu(){
+        System.out.println("======== ALDEBARAMEN ========");
+        getMenuByKategori("Ramen");
+        getMenuByKategori("Kuah");
+        getMenuByKategori("Toping");
+        getMenuByKategori("Minuman");
+    }
+
+    
+
+    
+
+   
 }

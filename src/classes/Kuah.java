@@ -10,5 +10,15 @@ package classes;
  * @author ASUS
  */
 public class Kuah extends Menu {
-    public Kuah (String nama_kuah){}
+    public Kuah (String nama_kuah){
+        setNama_menu(nama_kuah);
+        setHarga(0);
+        setKategori("Kuah");     
+    }
+
+    public Kuah(String kuah_Spicy_Lada, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
 }

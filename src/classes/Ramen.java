@@ -9,8 +9,13 @@ package classes;
  *
  * @author ASUS
  */
+//paremeter nsma_ramen diganti menjadi nama_ramen (typo)
 public class Ramen extends Menu {
-    public Ramen (String nama_ramen, double harga){}
+    public Ramen (String nama_ramen, double harga){
+    setNama_menu (nama_ramen);
+    setHarga(harga);
+    setKategori("Ramen");
+    }
         
     
 }
